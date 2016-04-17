@@ -13,6 +13,7 @@ import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemExample;
 
 public class TestPageHelper {
+	@SuppressWarnings("resource")
 	@Test
 	public void testPageHelper() {
 		//创建一个spring容器

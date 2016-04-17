@@ -7,6 +7,8 @@
   <modules>
   	<module>taotao-common</module>
   	<module>taotao-manager</module>
+  	<module>taotao-doc</module>
+  	<module>taotao-portal</module>
   </modules>
   
   <repositories>
