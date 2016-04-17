@@ -1,0 +1,3 @@
+location ^~ /image/ {
+           alias /home/files/;
+				}
