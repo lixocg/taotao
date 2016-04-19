@@ -1,4 +1,4 @@
-package com.taotao.redis;
+package com.taotao.rest;
 
 import java.util.HashSet;
 
