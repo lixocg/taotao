@@ -10,6 +10,7 @@
 		<module>taotao-manager</module>
 		<module>taotao-doc</module>
 		<module>taotao-portal</module>
+		<module>taotao-search</module>
 	</modules>
 
 	<repositories>
