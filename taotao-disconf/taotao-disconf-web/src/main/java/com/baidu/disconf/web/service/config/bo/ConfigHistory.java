@@ -12,28 +12,60 @@ import lombok.Data;
 @Table(db = DB.DB_NAME, name = "config_history", keyColumn = "id")
 public class ConfigHistory extends BaseObject<Long> {
 
-    /**
-     *
-     */
-    @Column(value = Columns.CONFIG_ID)
-    private Long configId;
+	/**
+	 *
+	 */
+	@Column(value = Columns.CONFIG_ID)
+	private Long configId;
 
-    /**
-     *
-     */
-    @Column(value = "old_value")
-    private String oldValue;
+	/**
+	 *
+	 */
+	@Column(value = "old_value")
+	private String oldValue;
 
-    /**
-     *
-     */
-    @Column(value = "new_value")
-    private String newValue;
+	/**
+	 *
+	 */
+	@Column(value = "new_value")
+	private String newValue;
 
-    /**
-     * 创建时间
-     */
-    @Column(value = Columns.CREATE_TIME)
-    private String createTime;
+	/**
+	 * 创建时间
+	 */
+	@Column(value = Columns.CREATE_TIME)
+	private String createTime;
+
+	public Long getConfigId() {
+		return configId;
+	}
+
+	public void setConfigId(Long configId) {
+		this.configId = configId;
+	}
+
+	public String getOldValue() {
+		return oldValue;
+	}
+
+	public void setOldValue(String oldValue) {
+		this.oldValue = oldValue;
+	}
+
+	public String getNewValue() {
+		return newValue;
+	}
+
+	public void setNewValue(String newValue) {
+		this.newValue = newValue;
+	}
+
+	public String getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(String createTime) {
+		this.createTime = createTime;
+	}
 
 }

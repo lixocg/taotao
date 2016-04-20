@@ -15,21 +15,46 @@ import lombok.Data;
 @Data
 public class AppNewForm extends RequestFormBase {
 
-    /**
-     *
-     */
-    private static final long serialVersionUID = 4329463343279659715L;
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 4329463343279659715L;
 
-    @NotNull(message = "app.empty")
-    @NotEmpty(message = "app.empty")
-    private String app;
-    public final static String APP = "app";
+	@NotNull(message = "app.empty")
+	@NotEmpty(message = "app.empty")
+	private String app;
+	public final static String APP = "app";
 
-    @NotNull(message = "desc.empty")
-    @NotEmpty(message = "desc.empty")
-    private String desc;
+	@NotNull(message = "desc.empty")
+	@NotEmpty(message = "desc.empty")
+	private String desc;
 
-    // 邮箱
-    private String emails = "";
+	// 邮箱
+	private String emails = "";
+
+	public String getApp() {
+		return app;
+	}
+
+	public void setApp(String app) {
+		this.app = app;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+
+	public String getEmails() {
+		return emails;
+	}
+
+	public void setEmails(String emails) {
+		this.emails = emails;
+	}
+
 
 }
