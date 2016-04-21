@@ -3,6 +3,7 @@
 	<name>taotao-disconf-web</name>
 	<comment></comment>
 	<projects>
+		<project>taotao-disconf-core</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
