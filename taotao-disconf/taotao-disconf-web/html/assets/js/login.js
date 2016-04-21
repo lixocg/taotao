@@ -28,7 +28,7 @@
             }
         }).done(function (data) {
             if (data.success === "true") {
-                window.VISITOR = data.result.visitor;
+                //window.VISITOR = data.result.visitor;
                 $("#loginError").hide();
                 headShowInit();
                 window.location.href = "/main.html";
