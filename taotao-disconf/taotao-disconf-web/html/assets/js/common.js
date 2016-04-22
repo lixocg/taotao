@@ -40,7 +40,7 @@ function getSession() {
         timeout: 3000 // 3s timeout
     }).done(function (data) {
         if (data.success === "true") {
-            //window.VISITOR = data.result.visitor;
+            window.VISITOR = data.result.visitor;
             headShowInit();
         } else {
             window.location.href = "/login.html";

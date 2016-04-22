@@ -24,6 +24,9 @@ import com.baidu.dsp.common.constant.ErrorCode;
 import com.baidu.dsp.common.constant.WebConstants;
 import com.baidu.dsp.common.controller.BaseController;
 import com.baidu.dsp.common.vo.JsonObjectBase;
+import com.baidu.dsp.common.vo.JsonObjectUtils;
+import com.google.gson.Gson;
+import com.mysql.jdbc.log.Log;
 
 /**
  * @author liaoqiqi
@@ -102,8 +105,10 @@ public class UserController extends BaseController {
         redisLogin.login(request, user, expireTime);
 
         VisitorVo visitorVo = userMgr.getCurVisitor();
-
-        return buildSuccess("visitor", visitorVo);
+        JsonObjectBase buildSuccess = buildSuccess("visitor", visitorVo);
+        LOG.info("visitor...."+buildSuccess);
+        LOG.info("visitor...gson..."+ new Gson().toJson(buildSuccess));
+        return buildSuccess;
     }
 
     /**

@@ -9,7 +9,7 @@ import org.reflections.Reflections;
 import com.baidu.disconf.client.common.update.IDisconfUpdatePipeline;
 
 /**
- * 扫描静态存储的对象
+ * 扫描静态存储的对象，实际上就是对org.reflections.Reflections的包装
  *
  * @author liaoqiqi
  * @version 2014-6-9
