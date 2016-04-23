@@ -76,6 +76,6 @@
 	</bean>
 
 	<!-- 集群 -->
-	<bean id="jedisClient" class="com.taotao.rest.dao.impl.JedisClientCluster" />
+	<bean id="jedisClient" class="com.taotao.order.dao.impl.JedisClientCluster" />
 
 </beans>
