@@ -1,3 +1,6 @@
+
+use disconf;
+
 INSERT INTO `app` (`app_id`, `name`, `description`, `create_time`, `update_time`, `emails`)
 VALUES
     (2, 'disconf_demo', 'disconf demo', '99991231235959', '99991231235959', '');
