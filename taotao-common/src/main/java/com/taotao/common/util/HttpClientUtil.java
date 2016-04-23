@@ -12,6 +12,8 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.entity.ContentType;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
@@ -103,6 +105,40 @@ public class HttpClientUtil {
 		return doPost(url, null);
 	}
 	
+	/**
+	 * 请求json参数的post
+	 * @param url
+	 * @param json
+	 * @return
+	 */
+	public static String doPostJson(String url, String json) {
+		// 创建Httpclient对象
+				CloseableHttpClient httpClient = HttpClients.createDefault();
+				CloseableHttpResponse response = null;
+				String resultString = "";
+				try {
+					// 创建Http Post请求
+					HttpPost httpPost = new HttpPost(url);
+					//创建请求内容
+					StringEntity entity = new StringEntity(json, ContentType.APPLICATION_JSON);
+					httpPost.setEntity(entity);
+					// 执行http请求
+					response = httpClient.execute(httpPost);
+					resultString = EntityUtils.toString(response.getEntity(), "utf-8");
+				} catch (Exception e) {
+					e.printStackTrace();
+				} finally {
+					try {
+						response.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+
+				return resultString;
+	}
+	
 	public static void main(String[] args) {
 		try{
 		String url = "http://service.so315.cn/experain/order?appToken=5fe1bfa8b369449096aa151f24bc70e8&parameters=%7B%22SBDNO%22%3A%220124688891%22%2C%22orgName%22%3A%22%E4%B8%8A%E6%B5%B7%E8%BF%88%E5%B0%94%E8%BE%BE%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22%2C%22areaNum%22%3A%22310117%22%2C%22finalDate%22%3A%222017-04-20+11%3A41%3A39%22%2C%22orderId%22%3A1152922965730473724%7D";
@@ -112,4 +148,6 @@ public class HttpClientUtil {
 			e.printStackTrace();
 		}
 	}
+
+	
 }
