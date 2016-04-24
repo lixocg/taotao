@@ -1,12 +1,6 @@
 package com.taotao.common.pojo;
 /**
  * 上传图片返回值
- * <p>Title: PictureResult</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年7月22日下午2:09:02
- * @version 1.0
  */
 public class PictureResult {
 

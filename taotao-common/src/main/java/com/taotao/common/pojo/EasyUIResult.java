@@ -4,12 +4,6 @@ import java.util.List;
 
 /**
  * easyUIDataGrid对象返回值
- * <p>Title: EasyUIResult</p>
- * <p>Description: </p>
- * <p>Company: www.itcast.com</p> 
- * @author	入云龙
- * @date	2015年7月21日下午4:12:52
- * @version 1.0
  */
 public class EasyUIResult {
 
